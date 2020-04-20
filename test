@@ -1,0 +1,35 @@
+
+import socket
+# import platform
+# def is_Chinese(word):
+#     for ch in word:
+#         if '\u4e00' <= ch <= '\u9fff':
+#             return True
+#     return False
+# p = platform.node()
+
+# hn = socket.gethostname()
+# t = '..localmachine'
+# ip_test = socket.gethostbyname('..localmachine'.encode('utf-8'))
+# print(ip_test)
+# test = socket.getfqdn(hn)
+# print(hn)
+# hostname =str(hn.encode('unicode_escape'),'utf-8')
+# hostname = socket.getfqdn(hn)
+# print(hostname.encode('utf-8').decode('unicode_escape'))
+        # 获取本机ip
+# ip = socket.getaddrinfo(hn, None)[-1][4][0]
+# status = is_Chinese(hn)
+#
+# print(status)
+# if status:
+#     ip = socket.getaddrinfo(hn, None)[-1][4][0]
+# else:
+#     ip = socket.getaddrinfo(hn,None)[-1][4][0]
+# print(ip)
+
+s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+s.connect(('8.8.8.8', 80))
+ip = s.getsockname()[0]
+print(ip)
+
