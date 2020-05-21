@@ -6,12 +6,12 @@
 		<ServerPort>8888</ServerPort>
 		<XmlLocalPath>default</XmlLocalPath>
 	</ServerInfo>
-	<ClientVersion Version="7">
+	<ClientVersion Version="8">
 		<object>
 			<FileRelativePath>ClientVersion/readme.txt</FileRelativePath>
-			<FileSize>16</FileSize>
-			<LastUpdateTime>2020-05-05 15:27:20</LastUpdateTime>
-			<Version>1</Version>
+			<FileSize>21</FileSize>
+			<LastUpdateTime>2020-05-21 12:30:36</LastUpdateTime>
+			<Version>2</Version>
 		</object>
 		<object>
 			<FileRelativePath>ClientVersion/exe.win-amd64-3.6/barometer.exe</FileRelativePath>

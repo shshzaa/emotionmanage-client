@@ -2,9 +2,10 @@ import sys
 from cx_Freeze import setup, Executable
 import os
 
-os.environ['TCL_LIBRARY'] = "C:\\Python36-32\\tcl\\tcl8.6"
-os.environ['TK_LIBRARY'] = "C:\\Python36-32\\tcl\\tk8.6"
-
+# os.environ['TCL_LIBRARY'] = "C:\\Python36-32\\tcl\\tcl8.6"
+# os.environ['TK_LIBRARY'] = "C:\\Python36-32\\tcl\\tk8.6"
+os.environ['TCL_LIBRARY'] = "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python36\\tcl\\tcl8.6"
+os.environ['TK_LIBRARY'] = "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python36\\tcl\\tk8.6"
 base = None
 
 if sys.platform == 'win32':
@@ -12,13 +13,13 @@ if sys.platform == 'win32':
 
 includes = [r'queue',r'idna.idnadata']
 
-include_files = ["C:\\Python36-32\DLLs\\tcl86t.dll",
-                 "C:\\Python36-32\DLLs\\tk86t.dll",
+include_files = ["C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python36\\DLLs\\tcl86t.dll",
+                 "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python36\\DLLs\\tk86t.dll",
                  'icon_32.ico',
-                 'question.json',
                  'log.txt',
                  'logo.jpg',
-                 'loginfirst.png']
+                 'loginfirst.png',
+                 'VersionInfo.xml']
 
 options = {
 'build_exe':{ 'includes':includes,'include_files':include_files},

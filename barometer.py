@@ -8,17 +8,17 @@ import os
 # from tkinter import *
 import tkinter
 from tkinter import ttk
-
+import client
 from PIL import ImageTk,Image
 import socket
 from psutil import net_if_addrs
 import requests
 import logging
+import subprocess
 
 
-
-server_url = 'http://emotion.test.cloud.zj.sgcc.com.cn'#服务器地址
-# server_url = 'http://127.0.0.1'#服务器地址
+# server_url = 'http://emotion.test.cloud.zj.sgcc.com.cn'#服务器地址
+server_url = 'http://www.baidu.com'#服务器地址
 
 
 class Barometer(QtWidgets.QDialog,Ui_Dialog):
@@ -51,7 +51,17 @@ class Barometer(QtWidgets.QDialog,Ui_Dialog):
         logging.info('success')
         
     def initUI(self):
-        print('ip&mac')
+        updateflag = client.updateJudge()
+        print(updateflag)
+        if updateflag:
+            bat = open('upgrade.bat','w')
+            TempList = "@echo off\n"
+            TempList += "start " + os.path.dirname(sys.path[0]) + '\\update\\update.exe'
+            print(TempList)
+            bat.write(TempList)
+            bat.close()
+            subprocess.Popen("upgrade.bat")
+            sys.exit()
         self.get_ip_address()
         self.get_mac_address()
         if not os.path.exists('config.json'):
