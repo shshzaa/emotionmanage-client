@@ -15,10 +15,12 @@ from psutil import net_if_addrs
 import requests
 import logging
 import subprocess
+import sys
+import configparser
 
 
 # server_url = 'http://emotion.test.cloud.zj.sgcc.com.cn'#服务器地址
-server_url = 'http://www.baidu.com'#服务器地址
+# server_url = 'http://www.baidu.com'#服务器地址
 
 
 class Barometer(QtWidgets.QDialog,Ui_Dialog):
@@ -56,7 +58,7 @@ class Barometer(QtWidgets.QDialog,Ui_Dialog):
         if updateflag:
             bat = open('upgrade.bat','w')
             TempList = "@echo off\n"
-            TempList += "start " + os.path.dirname(sys.path[0]) + '\\update\\update.exe'
+            TempList += "start " + './update.exe'
             print(TempList)
             bat.write(TempList)
             bat.close()
@@ -359,7 +361,7 @@ class Barometer(QtWidgets.QDialog,Ui_Dialog):
             
             s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
             
-            s.connect(('127.0.0.1', 80))
+            s.connect((server_ip, server_port))
             
             print(s.getsockname())
             self.ip = s.getsockname()[0]
@@ -452,7 +454,13 @@ class myLabel(QtWidgets.QLabel):
             self.clicked.emit()
 
 if __name__ == '__main__':
-    import sys
+
+    ini_path = "./cfg.ini" # 用于配置使用的ip地址和端口号
+    config_parser = configparser.ConfigParser()
+    config_parser.read(ini_path)
+    server_url = config_parser.get("server_info", 'url')
+    server_ip = config_parser.get("server_info", 'ip')
+    server_port = int(config_parser.get("server_info", 'port'))
     app =   QtWidgets.QApplication(sys.argv)
     QtCore.QCoreApplication.setAttribute(QtCore.Qt.AA_UseSoftwareOpenGL)#openGL
     main = QtWidgets.QMainWindow()

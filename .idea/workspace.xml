@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20c05226-9ce4-43cb-ae6c-9aadba0c6ae1" name="Default" comment="add autoupdate function">
-      <change beforePath="$PROJECT_DIR$/.idea/Barometer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Barometer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VersionInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/VersionInfo.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/barometer.py" beforeDir="false" afterPath="$PROJECT_DIR$/barometer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assistant.exe.lnk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/c.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/安装教程.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/upgrade.bat" beforeDir="false" afterPath="$PROJECT_DIR$/upgrade.bat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +58,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../UpdateSystem/Server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../UpdateSystem/Client" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -225,7 +226,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1548032308312</updated>
-      <workItem from="1589871070058" duration="14830000" />
+      <workItem from="1589871070058" duration="16736000" />
+      <workItem from="1590720901866" duration="9033000" />
+      <workItem from="1590900606430" duration="9728000" />
     </task>
     <task id="LOCAL-00001" summary="add autoupdate function">
       <created>1589270597120</created>
@@ -234,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589270597120</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add autoupdate function">
+      <created>1590041281589</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1590041281589</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,58 +259,58 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1589982900790" />
-    <state x="236" y="0" key="CommitChangelistDialog2" timestamp="1589986065364">
+    <state x="236" y="0" key="CommitChangelistDialog2" timestamp="1591019467170">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="236" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1589986065364" />
-    <state x="463" y="122" key="FileChooserDialogImpl" timestamp="1590035355114">
+    <state x="236" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1591019467170" />
+    <state x="463" y="122" key="FileChooserDialogImpl" timestamp="1590990087188">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="122" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1590035355114" />
-    <state width="1323" height="223" key="GridCell.Tab.0.bottom" timestamp="1590039850598">
+    <state x="463" y="122" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1590990087188" />
+    <state width="1286" height="163" key="GridCell.Tab.0.bottom" timestamp="1590991658633">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590039850598" />
-    <state width="1323" height="223" key="GridCell.Tab.0.center" timestamp="1590039850598">
+    <state width="1286" height="163" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590991658633" />
+    <state width="1286" height="163" key="GridCell.Tab.0.center" timestamp="1590991658633">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590039850598" />
-    <state width="1323" height="223" key="GridCell.Tab.0.left" timestamp="1590039850597">
+    <state width="1286" height="163" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590991658633" />
+    <state width="1286" height="163" key="GridCell.Tab.0.left" timestamp="1590991658632">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590039850597" />
-    <state width="1323" height="223" key="GridCell.Tab.0.right" timestamp="1590039850598">
+    <state width="1286" height="163" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590991658632" />
+    <state width="1286" height="163" key="GridCell.Tab.0.right" timestamp="1590991658633">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590039850598" />
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1590039848739">
+    <state width="1286" height="163" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590991658633" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1590203118426">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590039848739" />
-    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1590039848739">
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590203118426" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1590203118426">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1590039848739" />
-    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1590039848739">
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1590203118426" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1590203118426">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1590039848739" />
-    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1590039848739">
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1590203118426" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1590203118426">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1590039848739" />
-    <state x="186" y="9" key="SettingsEditor" timestamp="1589984287107">
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1590203118426" />
+    <state x="186" y="9" key="SettingsEditor" timestamp="1590734218344">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1589984287107" />
+    <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1590734218344" />
     <state x="391" y="101" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1589986054992">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="391" y="101" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1366.728@0.0.1366.728" timestamp="1589986054992" />
-    <state x="477" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590041168237">
+    <state x="477" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591019164483">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="477" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1590041168237" />
+    <state x="477" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1591019164483" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -312,7 +322,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/barometer.py</url>
-          <line>285</line>
+          <line>287</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -357,7 +367,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/barometer.py</url>
-          <line>60</line>
+          <line>62</line>
           <option name="timeStamp" value="77" />
         </line-breakpoint>
       </breakpoints>
@@ -369,6 +379,6 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/emotionmanage_client$barometer.coverage" NAME="barometer Coverage Results" MODIFIED="1590039844234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/emotionmanage_client$barometer.coverage" NAME="barometer Coverage Results" MODIFIED="1590991658619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

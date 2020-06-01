@@ -6,24 +6,12 @@
 		<ServerPort>8888</ServerPort>
 		<XmlLocalPath>default</XmlLocalPath>
 	</ServerInfo>
-	<ClientVersion Version="8">
-		<object>
-			<FileRelativePath>ClientVersion/readme.txt</FileRelativePath>
-			<FileSize>21</FileSize>
-			<LastUpdateTime>2020-05-21 12:30:36</LastUpdateTime>
-			<Version>2</Version>
-		</object>
-		<object>
-			<FileRelativePath>ClientVersion/exe.win-amd64-3.6/barometer.exe</FileRelativePath>
-			<FileSize>17920</FileSize>
-			<LastUpdateTime>2020-05-05 22:14:31</LastUpdateTime>
-			<Version>6</Version>
-		</object>
+	<ClientVersion Version="2">
 		<object>
 			<FileRelativePath>ClientVersion/exe.win-amd64-3.6/test.txt</FileRelativePath>
-			<FileSize>28</FileSize>
-			<LastUpdateTime>2020-05-05 15:53:37</LastUpdateTime>
-			<Version>1</Version>
+			<FileSize>43</FileSize>
+			<LastUpdateTime>2020-05-31 13:55:38</LastUpdateTime>
+			<Version>2</Version>
 		</object>
 	</ClientVersion>
 </versionInfo>

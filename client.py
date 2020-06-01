@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2019/4/25 20:16
-# @Author  : g05325
+# @Time    : 2020 06/01
+# @Author  : zhangpengjie
 # @File    : AutoUpdate.py
 # @Software: PyCharm
 # @Function: 实现客户端自动更新（客户端）
@@ -163,8 +163,11 @@ def CheckUpdate(server_ip, server_port, module_name, order):
 def AutoUpdate(server_ip, server_port, module_name, order):
     time_start = time.perf_counter()
     try:
-        download_url = "http://{0}:{1}/{2}".format(server_ip, server_port, "VersionInfo.xml")
-        local_path = os.path.join(sys.path[0], "VersionInfoTemp.xml")
+        download_url = "http://{0}:{1}/{2}".format(server_ip,server_port, "VersionInfo.xml")
+        # 由于云平台端口映射的问题，需要用域名方式访问
+        # download_url = "http://{0}/ClientFolder/{1}".format(server_ip, each_file)
+        # local_path = os.path.join(sys.path[0], "VersionInfoTemp.xml")
+        local_path = "./VersionInfoTemp.xml"
         print("download_url: " + download_url)
         if not download_file_by_http(download_url, local_path):
             raise Exception()
@@ -177,6 +180,16 @@ def AutoUpdate(server_ip, server_port, module_name, order):
     # root.deiconify()
     # 比较文件变化
     add_dict, delete_list = analyze_update_info(local_xml_path, update_xml_path, module_name)
+    #barometer只需判断是否需要更新，无需更新xml
+    if add_dict == {} and delete_list == []:
+        os.remove(update_xml_path)
+        # tkinter.messagebox.showinfo("更新无法继续", "当前客户端已经是最新版本！")
+        print("No file changed!")
+        return False
+    else:
+        os.remove(update_xml_path)#remove temp_xml
+        return True
+    '''
     if add_dict == {} and delete_list == []:
         os.remove(update_xml_path)
         # tkinter.messagebox.showinfo("更新无法继续", "当前客户端已经是最新版本！")
@@ -189,7 +202,7 @@ def AutoUpdate(server_ip, server_port, module_name, order):
         else:
             update_xml(local_xml_path, update_xml_path, module_name)
         return True
-
+    '''
 
 # 分析两个xml文件
 def analyze_update_info(local_xml, update_xml, module_name):
@@ -287,8 +300,10 @@ for opt, value in opts:
 # endregion
 
 # 启动窗口
-local_xml_path = os.path.join(sys.path[0], "VersionInfo.xml")
-update_xml_path = os.path.join(sys.path[0], "VersionInfoTemp.xml")
+# local_xml_path = os.path.join(sys.path[0], "VersionInfo.xml")
+local_xml_path = "./VersionInfo.xml"
+# update_xml_path = os.path.join(sys.path[0], "VersionInfoTemp.xml")
+update_xml_path = "./VersionInfoTemp.xml"
 local_xml = VersionInfoXml(local_xml_path)
 server_ip = local_xml.get_node_value("ServerInfo/ServerIp")
 server_port = local_xml.get_node_value("ServerInfo/ServerPort")
